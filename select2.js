@@ -1813,7 +1813,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
                 this.search.val(this.focusser.val());
             }
-            this.search.focus();
+            //this.search.focus();
             // move the cursor to the end after focussing, otherwise it will be at the beginning and
             // new text will appear *before* focusser.val()
             el = this.search.get(0);
@@ -1821,9 +1821,9 @@ the specific language governing permissions and limitations under the Apache Lic
                 range = el.createTextRange();
                 range.collapse(false);
                 range.select();
-            } else if (el.setSelectionRange) {
-                len = this.search.val().length;
-                el.setSelectionRange(len, len);
+				//  } else if (el.setSelectionRange) {
+				//      len = this.search.val().length;
+				//      el.setSelectionRange(len, len);
             }
 
             // initializes search's value with nextSearchTerm (if defined by user)
@@ -1849,7 +1849,7 @@ the specific language governing permissions and limitations under the Apache Lic
             this.focusser.removeAttr("disabled");
 
             if (params.focus) {
-                this.focusser.focus();
+              //  this.focusser.focus();
             }
         },
 
